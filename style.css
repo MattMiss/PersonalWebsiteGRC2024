@@ -1,0 +1,26 @@
+
+p{
+    margin-bottom: 0;
+}
+
+h4{
+    margin-bottom: 0;
+}
+
+.resume-container{
+    padding-top: 20px;
+    max-width: 900px;
+}
+
+.resume-container p, li{
+    font-size: .9rem;
+}
+
+.resume-section{
+    margin-bottom: 16px;
+}
+
+.resume-list{
+    margin-left: 20px;
+    margin-bottom: 0;
+}
