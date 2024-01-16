@@ -1,3 +1,6 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 p{
     margin-bottom: 0;
@@ -8,8 +11,11 @@ h4{
 }
 
 .resume-container{
-    padding-top: 20px;
+    padding: 20px 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     max-width: 900px;
+    box-shadow: 0px 7px 14px 0px #949494;
 }
 
 .resume-container p, li{
