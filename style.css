@@ -1,21 +1,60 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
+:root {
+    --bg-color: #161616;
+    --primary-color: #284B45;
+    --secondary-color: #c5d1b9;
+    --tertiary-color: #85b8a7;
+    --dark-color: #333;
+    --accent-color: #c35733;
+    --font-color: #c5c5c5;
 }
 
-p{
+body{
+    background-color: var(--bg-color) !important;
+    color: var(--font-color);
+}
+
+a {
+    color: white !important;
+}
+
+p {
     margin-bottom: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 h4{
     margin-bottom: 0;
 }
 
+hr{
+    border: 1px solid var(--accent-color) !important;
+    opacity: 1;
+}
+
+.navbar{
+    background-color: var(--primary-color) !important;
+    color: var(--accent-color) !important;
+}
+
+.nav-item{
+    font-size: 1rem;
+}
+
+.active{
+    border-bottom: 3px solid var(--accent-color);
+}
+
 .resume-container{
+    font-family: Arial, Helvetica, sans-serif;
     padding: 20px 50px;
     margin-top: 20px;
     margin-bottom: 50px;
     max-width: 900px;
-    box-shadow: 0px 7px 14px 0px #949494;
+    border: 1px solid var(--font-color);
 }
 
 .resume-container p, li{
@@ -24,9 +63,236 @@ h4{
 
 .resume-section{
     margin-bottom: 16px;
+    width: 100%;
 }
 
 .resume-list{
     margin-left: 20px;
     margin-bottom: 0;
+}
+
+.about-container{
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding-top: 50px !important;
+}
+
+.contact-container{
+    max-width: 800px;
+}
+
+.projects-container ul span {
+    padding-top: 20px;
+}
+
+.horizontal-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+
+    span{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+
+.projects-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+
+    span {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    i{
+        color: var(--accent-color);
+    }
+}
+
+.project-sidebar{
+    background-color: var(--dark-color);
+
+    border-radius: 10px;
+
+    i {
+        font-size: 1.2rem;
+    }
+    span{
+        line-height: 2rem;
+    }
+
+}
+
+.project-main{
+
+}
+
+.project-desc{
+    font-size: 1.2rem;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.form-control{
+    border-radius: 0;
+}
+
+.form-header{
+    padding: 20px;
+    color: var(--accent-color);
+    margin:auto;
+}
+
+#submit-btn{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-resume{
+    background-color: var(--secondary-color);
+
+    a {
+        color: var(--bg-color) !important;
+    }
+}
+
+.btn-resume:hover {
+    background-color: var(--accent-color);
+
+    a {
+        color: var(--font-color) !important;
+    }
+}
+
+
+
+.about-name{
+    font-family: 'Geologica', sans-serif;
+    font-size: 4rem;
+    margin-left: -4px;
+    color: var(--accent-color);
+}
+
+.about-about-me{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.about-paragraph{
+
+}
+
+.about-me-img{
+
+}
+
+.navbar-brand{
+    .first-name{
+        font-family: 'Geologica', sans-serif;
+        font-size: 2rem;
+    }
+    .last-name{
+        font-family: 'Raleway', sans-serif;
+        font-size: 2rem;
+    }
+}
+
+.nav-link-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar-toggler{
+    max-height: 50px;
+}
+
+.nav-btn-container{
+    justify-content: end;
+}
+
+.projects-container{
+    padding: 3rem;
+}
+
+.project-sidebar-inner{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-links{
+    padding-top : 10px;
+    padding-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 768px){
+    .nav-link-container{
+        justify-content: start;
+    }
+
+    .nav-btn-container{
+        justify-content: space-between;
+    }
+
+    .projects-container{
+        padding: 1rem;
+    }
+
+    .project-sidebar-inner{
+        flex-direction: row;
+    }
+
+    .sidebar-divider{
+        display: none;
+    }
+
+    .horizontal-list span{
+        font-size: 0.8rem !important;
+    }
+
+    .project-title{
+        font-size: 1.2rem !important;
+    }
+}
+
+@media only screen and (max-width: 992px){
+
+    .horizontal-list span{
+        font-size: 0.8rem !important;
+    }
+    .project-sidebar{
+        h5{
+            font-size: 0.8rem !important;
+        }
+
+        .span{
+            font-size: .5rem !important;
+        }
+    }
+
+    .project-desc{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .projects-container{
+        padding: 2rem;
+    }
+
+    .project-title{
+        font-size: 1.3rem !important;
+    }
 }
