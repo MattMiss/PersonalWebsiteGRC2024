@@ -23,7 +23,7 @@ if ($form_data){
 
     // Try to send email. Tell user message was sent if mail() returns true
     if (mail($to, $subject, $message, $headers)){
-        header('Location: thankyou.html');
+        //header('Location: thankyou.html');
     }else{
         echo "<h3>There was an error in your form.</h3>";
     }

@@ -1,41 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@600&family=Raleway:wght@300&display=swap" rel="stylesheet">    <title>Matt Miss</title>
-    <title>Matt Miss - Resume</title>
-</head>
-<body>
-<nav class="navbar navbar-expand-md bg-body-tertiary">
-    <div class="container-fluid">
-        <div class="row w-100">
-            <div class="col-md-4">
-                <a class="navbar-brand w-25" href="#">
-                    <span class="first-name">Matt</span><span class="last-name">Miss</span>
-                </a>
-            </div>
-            <div class="col-md-4 d-flex justify-content-end">
-                <div class="collapse navbar-collapse justify-content-center" id="navbar-center">
-                    <div class="nav-link-container">
-                        <ul class="navbar-nav pe-5">
-                            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">PROJECTS</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 text-end d-flex nav-btn-container">
-                <button type="button" class="btn btn-resume"><a class="text-decoration-none" href="#">Resume</a></button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-center" aria-controls="navbar-center" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </div>
-    </div>
-</nav>
+<?php
+$active = 'resume';
+$title = 'Matt Miss - Resume';
+include 'header.php';
+include 'navbar.php';
+?>
+
 <div class="container p-3">
     <h1 class="form-header text-center">RESUME</h1>
 </div>
@@ -209,5 +178,5 @@
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-</html>
+<?php
+include 'footer.php';

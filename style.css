@@ -8,9 +8,23 @@
     --font-color: #c5c5c5;
 }
 
+html {
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
 body{
     background-color: var(--bg-color) !important;
     color: var(--font-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+}
+
+main{
+    display: flex;
+    flex: 1;
 }
 
 a {
@@ -35,166 +49,45 @@ hr{
     opacity: 1;
 }
 
+ul{
+    list-style: none;
+}
+
+/*   Width    */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/*   Track    */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/*   Handle    */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/*   Handle on hover    */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* -------------------------------------------------------------*/
+/* ------------------------ NAVBAR -----------------------------*/
+/* -------------------------------------------------------------*/
 .navbar{
     background-color: var(--primary-color) !important;
     color: var(--accent-color) !important;
+
+    .active{
+        border-bottom: 3px solid var(--accent-color);
+    }
 }
 
 .nav-item{
     font-size: 1rem;
-}
-
-.active{
-    border-bottom: 3px solid var(--accent-color);
-}
-
-.resume-container{
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px 50px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    max-width: 900px;
-    border: 1px solid var(--font-color);
-}
-
-.resume-container p, li{
-    font-size: .9rem;
-}
-
-.resume-section{
-    margin-bottom: 16px;
-    width: 100%;
-}
-
-.resume-list{
-    margin-left: 20px;
-    margin-bottom: 0;
-}
-
-.about-container{
-    font-size: 1.1rem;
-    line-height: 1.6rem;
-    padding-top: 50px !important;
-}
-
-.contact-container{
-    max-width: 800px;
-}
-
-.projects-container ul span {
-    padding-top: 20px;
-}
-
-.horizontal-list{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style: none;
-
-    span{
-        font-size: 1.1rem;
-        font-weight: bold;
-    }
-}
-
-.projects-container ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 15px;
-
-    span {
-        padding: 20px;
-        font-size: 1rem;
-    }
-
-    i{
-        color: var(--accent-color);
-    }
-}
-
-.project-sidebar{
-    background-color: var(--dark-color);
-
-    border-radius: 10px;
-
-    i {
-        font-size: 1.2rem;
-    }
-    span{
-        line-height: 2rem;
-    }
-
-}
-
-.project-main{
-
-}
-
-.project-desc{
-    font-size: 1.2rem;
-    padding-left: 90px;
-    padding-right: 90px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-
-.form-control{
-    border-radius: 0;
-}
-
-.form-header{
-    padding: 20px;
-    color: var(--accent-color);
-    margin:auto;
-}
-
-#submit-btn{
-    width: 100%;
-    padding: 10px;
-    background-color: var(--accent-color);
-    color: var(--font-color);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.btn-resume{
-    background-color: var(--secondary-color);
-
-    a {
-        color: var(--bg-color) !important;
-    }
-}
-
-.btn-resume:hover {
-    background-color: var(--accent-color);
-
-    a {
-        color: var(--font-color) !important;
-    }
-}
-
-
-
-.about-name{
-    font-family: 'Geologica', sans-serif;
-    font-size: 4rem;
-    margin-left: -4px;
-    color: var(--accent-color);
-}
-
-.about-about-me{
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.3rem;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 20px;
-}
-
-.about-paragraph{
-
-}
-
-.about-me-img{
 
 }
 
@@ -223,8 +116,178 @@ hr{
     justify-content: end;
 }
 
+.resume-github-div{
+    a {
+        font-size: 0.8rem;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+/* -------------------------------------------------------------*/
+/* ------------------------ RESUME -----------------------------*/
+/* -------------------------------------------------------------*/
+
+.resume-container{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    max-width: 900px;
+    border: 1px solid var(--font-color);
+}
+
+.resume-container p, li{
+    font-size: .9rem;
+}
+
+.resume-section{
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.resume-list{
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.btn-resume{
+    background-color: var(--secondary-color);
+
+    a {
+        color: var(--bg-color) !important;
+    }
+}
+
+.btn-resume:hover {
+    background-color: var(--accent-color);
+
+    a {
+        color: var(--font-color) !important;
+    }
+}
+
+/* -------------------------------------------------------------*/
+/* ------------------------ ABOUT ME ---------------------------*/
+/* -------------------------------------------------------------*/
+
+.about-container{
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding-top: 50px !important;
+}
+
+.about-name{
+    font-family: 'Geologica', sans-serif;
+    font-size: 4rem;
+    margin-left: -4px;
+    color: var(--accent-color);
+}
+
+.about-about-me{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.about-paragraph{
+
+}
+
+.about-me-img{
+
+}
+
+/* -------------------------------------------------------------*/
+/* ------------------------ CONTACT ----------------------------*/
+/* -------------------------------------------------------------*/
+.contact-container{
+    max-width: 800px;
+}
+
+.form-control{
+    border-radius: 0;
+}
+
+.form-header{
+    padding: 20px;
+    color: var(--accent-color);
+    margin:auto;
+}
+
+.submit-btn{
+    background-color: var(--accent-color);
+    color: var(--font-color);
+    border: transparent;
+    font-weight: bold;
+}
+
+.submit-btn:hover{
+    background-color: #9b4326;
+}
+
+/* -------------------------------------------------------------*/
+/* ------------------------ PROJECTS ---------------------------*/
+/* -------------------------------------------------------------*/
+
+.projects-container ul span {
+    padding-top: 20px;
+}
+
+.horizontal-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+
+    span{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+
+.projects-container ul {
+    padding: 0;
+    margin-top: 15px;
+
+    span {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    i{
+        color: var(--accent-color);
+    }
+}
+
+.project-sidebar{
+    background: rgb(22,22,22);
+    background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(22,22,22,1) 100%);
+    padding: 2.5rem;
+
+    i {
+        font-size: 1.2rem;
+    }
+    span{
+        line-height: 2rem;
+    }
+
+}
+
+.project-desc{
+    font-size: 1.2rem;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
 .projects-container{
-    padding: 3rem;
+
 }
 
 .project-sidebar-inner{
@@ -237,6 +300,176 @@ hr{
     padding-bottom: 10px;
 }
 
+.carousel-inner{
+    height: 500px;
+    max-width: 1000px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin: auto;
+
+}
+
+.carousel img{
+    transition: transform .5s;
+}
+
+.carousel-inner img:hover{
+    transform: scale(1.02);
+    filter: brightness(80%);
+}
+
+/* -------------------------------------------------------------*/
+/* ----------------------- GUESTBOOK ---------------------------*/
+/* -------------------------------------------------------------*/
+
+.guestbook-list{
+    max-height: 450px;
+    overflow-y: scroll;
+    border: 1px solid var(--accent-color);
+}
+
+.guestbook-entry{
+    background-color: #333;
+    border-radius: 4px;
+}
+
+#guestbook-entry-modal {
+    .modal-content{
+        height: 500px;
+        background-color: var(--bg-color);
+        border: 2px solid rgba(195, 87, 51, 0.34);
+    }
+
+    .modal-header{
+        border-bottom: none;
+        background-color: var(--primary-color);
+    }
+
+    .modal-footer{
+        border-top: none;
+    }
+
+    .cancel-btn{
+        background-color: #707070;
+        color: var(--font-color);
+        border: transparent;
+        font-weight: bold;
+    }
+
+    .cancel-btn:hover{
+        background-color: #4d4d4d;
+    }
+}
+
+#entry-comment{
+    height: 170px;
+}
+
+.error-msg{
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.form-label{
+    font-weight: bold;
+}
+
+.guestbook-process-msg{
+    color: var(--accent-color);
+    padding-top: 100px;
+}
+
+/* -------------------------------------------------------------*/
+/* ------------------------ FOOTER -----------------------------*/
+/* -------------------------------------------------------------*/
+
+footer{
+    background-color: #222;
+
+    ul{
+        padding-left: 0;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
+
+    .row{
+        max-width: 1200px;
+    }
+
+    a{
+        color: #AAA !important;
+    }
+}
+
+.footer-col{
+    height: 150px;
+    padding-top: 20px;
+}
+
+.footer-logo{
+    width: 120px;
+}
+
+.connect-links{
+    width: 150px;
+}
+
+.linkedin-icon{
+    background-color: #0077b5;
+    border-radius: 50%;
+}
+
+.github-icon{
+    background-color: #6cc644;
+    border-radius: 50%;
+}
+
+.youtube-icon{
+    background-color: #c03838;
+    border-radius: 50%;
+}
+
+/* -------------------------------------------------------------*/
+/* ------------------------ < 992px ----------------------------*/
+/* -------------------------------------------------------------*/
+
+@media only screen and (max-width: 992px){
+
+    .horizontal-list span{
+        font-size: 0.8rem !important;
+    }
+    .project-sidebar{
+        padding: 2rem;
+
+        h5{
+            font-size: 0.8rem !important;
+        }
+
+        .span{
+            font-size: .5rem !important;
+        }
+    }
+
+    .project-desc{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .projects-container{
+
+    }
+
+    .project-title{
+        font-size: 1.3rem !important;
+    }
+}
+
+/* -------------------------------------------------------------*/
+/* ------------------------ < 768px ----------------------------*/
+/* -------------------------------------------------------------*/
 
 @media only screen and (max-width: 768px){
     .nav-link-container{
@@ -248,7 +481,7 @@ hr{
     }
 
     .projects-container{
-        padding: 1rem;
+
     }
 
     .project-sidebar-inner{
@@ -266,33 +499,37 @@ hr{
     .project-title{
         font-size: 1.2rem !important;
     }
+
+    .nav-item{
+        text-align: left !important;
+    }
+
+    .resume-github-div{
+        text-align: left !important;
+    }
+
+    .footer-col{
+        text-align: center;
+    }
+
+    .connect-links-row{
+        justify-content: center !important;
+    }
 }
 
-@media only screen and (max-width: 992px){
+/* -------------------------------------------------------------*/
+/* ------------------------- MOBILE ----------------------------*/
+/* -------------------------------------------------------------*/
 
-    .horizontal-list span{
-        font-size: 0.8rem !important;
-    }
-    .project-sidebar{
-        h5{
-            font-size: 0.8rem !important;
-        }
+@media only screen and (max-width: 576px) {
+    .projects-container{
 
-        .span{
-            font-size: .5rem !important;
-        }
     }
 
     .project-desc{
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .projects-container{
-        padding: 2rem;
-    }
 
-    .project-title{
-        font-size: 1.3rem !important;
-    }
 }
